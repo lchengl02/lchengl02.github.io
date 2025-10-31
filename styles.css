@@ -83,18 +83,98 @@ header .container {
 }
 
 .about-image {
-  flex: 0 0 30%;
+  flex: 0 0 24%;
   text-align: center;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding-top: 5px;
 }
 
 .about-image img {
   width: 100%;
-  max-width: 300px;
+  max-width: 240px;
+  height: 240px;
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.social-link:hover {
+  background: #FF6900;
+  color: white;
+  border-color: #FF6900;
+  transform: translateY(-2px);
+}
+
+.news-section {
+  width: 100%;
+  max-width: 240px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e8e8e8;
+  text-align: left;
+}
+
+.news-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.news-item {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  text-align: left;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.news-date {
+  font-size: 11px;
+  color: #FF6900;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.news-content {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.5;
+  flex: 1;
 }
 
 .about-text {
@@ -113,6 +193,31 @@ header .container {
   line-height: 1.8;
   margin-bottom: 15px;
   color: #555;
+}
+
+.recruiting-notice {
+  margin-top: 25px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #fff5f0 0%, #ffe8db 100%);
+  border: 2px solid #FF6900;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(255, 105, 0, 0.1);
+}
+
+.recruiting-notice i {
+  color: #FF6900;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.recruiting-notice strong {
+  color: #FF6900;
+  font-weight: 600;
 }
 
 .highlight-purple {
@@ -414,7 +519,12 @@ footer a:hover {
   }
   
   .about-image img {
-    max-width: 250px;
+    max-width: 180px;
+  }
+  
+  .news-section {
+    margin-top: 30px;
+    padding-top: 25px;
   }
   
   .about-text h2 {
