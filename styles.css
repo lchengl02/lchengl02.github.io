@@ -511,18 +511,34 @@ footer a:hover {
     flex-direction: column;
     gap: 25px;
     margin-top: 20px;
+    flex-wrap: wrap;
   }
   
   .about-image {
     flex: none;
     width: 100%;
+    display: contents;
   }
   
   .about-image img {
     max-width: 180px;
+    order: 1;
+    margin: 0 auto;
+  }
+  
+  .social-links {
+    order: 2;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .about-text {
+    order: 3;
   }
   
   .news-section {
+    order: 4;
+    width: 100%;
     margin-top: 30px;
     padding-top: 25px;
   }
