@@ -32,6 +32,12 @@ function loadTab(tabName) {
       contentArea.classList.add('active');
       requestAnimationFrame(() => {
         applyRevealAnimations(contentArea);
+        if (tabName === 'about' && window.location.hash === '#publications') {
+          const pub = document.getElementById('publications');
+          if (pub) {
+            setTimeout(() => pub.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
+          }
+        }
       });
     })
     .catch(error => {
