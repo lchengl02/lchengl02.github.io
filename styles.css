@@ -463,22 +463,33 @@ header .container {
   margin-top: 20px;
   padding: 13px 16px;
   position: relative;
-  background: #fff;
-  color: var(--text-secondary);
-  border: 1px solid var(--border);
+  background:
+    linear-gradient(135deg, rgba(0, 39, 76, 0.96) 0%, rgba(10, 58, 107, 0.96) 100%);
+  color: #fff;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   gap: 11px;
   font-size: 13px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 7px 18px rgba(0, 39, 76, 0.14);
   overflow: hidden;
   isolation: isolate;
   animation: fadeInUp 0.7s 0.25s var(--ease-out) both;
 }
 
 .recruiting-notice::before {
-  content: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(255, 203, 5, 0.18) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 5.5s linear infinite;
+  z-index: -1;
 }
 
 .recruiting-notice::after {
@@ -488,29 +499,30 @@ header .container {
   top: 0;
   bottom: 0;
   width: 4px;
-  background: var(--umich-blue);
+  background: var(--umich-maize);
 }
 
 .recruiting-notice i {
-  color: var(--umich-blue);
+  color: var(--umich-maize);
   font-size: 18px;
   flex-shrink: 0;
+  animation: float 3.2s ease-in-out infinite;
 }
 
 .recruiting-notice strong {
-  color: var(--umich-blue);
+  color: var(--umich-maize);
   font-weight: 700;
 }
 
 .recruiting-notice a {
-  color: var(--umich-blue);
+  color: var(--umich-maize);
   text-decoration: none;
-  border-bottom: 1px solid rgba(0, 39, 76, 0.24);
+  border-bottom: 2px solid rgba(255, 203, 5, 0.4);
   transition: border-color var(--dur) var(--ease);
 }
 
 .recruiting-notice a:hover {
-  border-bottom-color: var(--umich-blue);
+  border-bottom-color: var(--umich-maize);
 }
 
 /* =========================================================
