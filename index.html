@@ -2,36 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Chenglin Li</title>
-  <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Chenglin Li is a first-year PhD student at the University of Michigan researching human-computer interaction, multimodal systems, and accessibility.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chenglin Li — HCI Researcher">
+  <meta property="og:description" content="Designing multimodal systems that support people in everyday tasks. Research in human-AI interaction and accessibility at the University of Michigan.">
+  <meta property="og:url" content="https://chenglinli.com/">
+  <meta property="og:image" content="https://chenglinli.com/lcl.png">
+  <title>Chenglin Li — HCI Researcher</title>
+  <link rel="canonical" href="https://chenglinli.com/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20260915-3">
+  <script src="script.js?v=20260915-2" defer></script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <ul class="tabs">
-        <li class="tab active" onclick="showTab('about')">About</li>
-        <!-- <li class="tab" onclick="showTab('project')">Project</li> -->
-        <!-- <li class="tab" onclick="showTab('research-map')">Research Map</li> -->
-        <li class="tab"><a href="assets/pdf/CV_Chenglin.pdf" target="_blank" style="color: inherit; text-decoration: none; display: block;">CV</a></li>
-      </ul>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#about" aria-label="Chenglin Li, home">Chenglin Li</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#about" aria-current="location">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+      </nav>
+      <a class="cv-link" href="assets/pdf/CV_Chenglin.pdf" target="_blank" rel="noopener noreferrer">CV <span aria-hidden="true">↗</span><span class="sr-only"> (PDF, opens in a new tab)</span></a>
     </div>
+    <div class="reading-progress" aria-hidden="true"></div>
   </header>
-  
-  <main class="container">
-    <div id="content-area" class="content active">
-      <!-- Content will be loaded here dynamically -->
-    </div>
+
+  <main id="main" class="container">
+    <section id="about" class="about-section" aria-labelledby="name-heading" data-nav-section>
+      <aside class="profile">
+        <img class="portrait" src="lcl.png" alt="Chenglin Li" width="512" height="512" fetchpriority="high">
+        <div class="profile-links" aria-label="Contact and profiles">
+          <a href="mailto:lchengl@umich.edu">Email</a>
+          <a href="https://github.com/lchengl02" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/chenglin-li-557267301/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://twitter.com/Chenglin791364" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+        </div>
+      </aside>
+      <div class="bio">
+        <h1 id="name-heading">Chenglin Li <span lang="zh">李承霖</span></h1>
+        <p class="affiliation">First-year PhD Student · University of Michigan</p>
+        <p>Hi! I'm a first-year PhD student at the University of Michigan, specializing in <strong>Human-Computer Interaction</strong> and advised by <a href="https://guoanhong.com" target="_blank" rel="noopener noreferrer">Anhong Guo</a>.</p>
+        <p>My research focuses on designing and evaluating <strong>multimodal systems</strong> that support lasting changes in behavior and workflows. I study how people work and build interactive systems that enhance human capabilities in real-world tasks.</p>
+        <p hidden>I've been fortunate to collaborate with and learn from <a href="https://www.linkedin.com/in/yayuan-li-148659272/" target="_blank" rel="noopener noreferrer">Yayuan Li</a>, <a href="https://xinyun-cao.github.io" target="_blank" rel="noopener noreferrer">Xinyun Cao</a>, <a href="https://web.eecs.umich.edu/~profdj/" target="_blank" rel="noopener noreferrer">Dhruv Jain</a>, and <a href="https://venkateshpotluri.me" target="_blank" rel="noopener noreferrer">Venkatesh Potluri</a>. I've also served as a Graduate Student Instructor under <a href="https://web.eecs.umich.edu/~sugih/" target="_blank" rel="noopener noreferrer">Sugih Jamin</a>.</p>
+        <p>Outside research, I enjoy badminton and <a href="https://www.bilibili.com/video/BV1Sb411h7Xy/" target="_blank" rel="noopener noreferrer">performing Peking Opera</a>.</p>
+        <p class="research-interests"><span>Research interests:</span> Human–AI interaction · Physical task guidance · Accessibility</p>
+      </div>
+    </section>
+
+    <section id="news" class="section news-section" aria-labelledby="news-heading" data-nav-section>
+      <div class="section-heading"><h2 id="news-heading">News</h2></div>
+      <div class="news-feed" data-reveal>
+        <ol class="news-list">
+          <li><time datetime="2026-02">FEB 2026</time><div><p><strong>RAVEN</strong> accepted to <strong>CHI 2026</strong> as a full paper!</p></div></li>
+          <li><time datetime="2025-10">OCT 2025</time><div><p><strong>RAVEN</strong> won the <span class="award-text">Best Demo Award</span> at <strong>ASSETS 2025</strong>. Congratulations to the team!</p></div></li>
+        </ol>
+        <details class="older-news"><summary>Earlier updates <span aria-hidden="true">+</span></summary><ol class="news-list"><li><time datetime="2025-08">AUG 2025</time><p><strong>RAVEN</strong> accepted as a demo at <strong>ASSETS 2025</strong>.</p></li><li><time datetime="2025-02">FEB 2025</time><p><strong>SceneGenA11y</strong> accepted to <strong>CHI 2025 Late-Breaking Work</strong>.</p></li></ol></details>
+      </div>
+    </section>
+
+    <section id="publications" class="section research-section" aria-labelledby="research-heading" data-nav-section>
+      <div class="section-heading"><h2 id="research-heading">Publications</h2></div>
+      <div class="publication-list">
+        <article class="publication" data-reveal>
+          <a class="publication-image icon-image" href="https://arxiv.org/abs/2605.17184" target="_blank" rel="noopener noreferrer" aria-label="Read the ICON preprint">
+            <img src="assets/images/ICON.png" alt="ICON overview comparing instructional videos and the visual context of physical tasks" width="1536" height="1024" loading="lazy">
+          </a>
+          <div class="publication-content">
+            <div class="publication-meta"><span class="badge">Preprint · 2026</span><span class="meta-note">In submission to CHI 2027</span></div>
+            <h3><a href="https://arxiv.org/abs/2605.17184" target="_blank" rel="noopener noreferrer">Substantial, Decomposable, and Invisible: Visual Context Misalignment in Instructional Videos for Physical Tasks</a></h3>
+            <p class="authors">Yayuan Li*, <strong>Chenglin Li*</strong>, Jingying Wang, Filippos Bellos, Anhong Guo†, Jason J. Corso†</p>
+            <p class="paper-summary">Two studies with 56 participants examine how visual context misalignment in instructional videos affects physical task performance and user perception.</p>
+            <details class="paper-details"><summary>Abstract <span aria-hidden="true">+</span></summary><p>We compare in-context instructional videos (ICON) with conventional videos, then isolate four visual attributes: task object intrinsics, task object state, environmental context, and observational context. Aligned videos improve completion quality and speed, while individual misalignments degrade performance.</p></details>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2605.17184" target="_blank" rel="noopener noreferrer">Read paper <span aria-hidden="true">↗</span></a><span class="contribution-note">* Equal contribution · † Co-supervision</span></div>
+          </div>
+        </article>
+
+        <article class="publication" data-reveal>
+          <a class="publication-image raven-image" href="https://doi.org/10.1145/3772318.3791616" target="_blank" rel="noopener noreferrer" aria-label="Read the RAVEN CHI 2026 paper">
+            <img src="assets/images/RAVEN.png" alt="RAVEN overview showing conversational accessibility in virtual 3D environments" width="1536" height="1024" loading="lazy">
+          </a>
+          <div class="publication-content">
+            <div class="publication-meta"><span class="badge">CHI 2026</span><span class="badge award-badge">ASSETS 2025 · Best Demo Award</span></div>
+            <h3><a href="https://doi.org/10.1145/3772318.3791616" target="_blank" rel="noopener noreferrer">RAVEN: Realtime Accessibility in Virtual ENvironments for Blind and Low-Vision People</a></h3>
+            <p class="authors">Xinyun Cao, Kexin Phyllis Ju, <strong>Chenglin Li</strong>, Venkatesh Potluri, Dhruv Jain</p>
+            <p class="paper-summary">RAVEN enables blind and low-vision people to query and modify virtual 3D scenes in real time using natural language.</p>
+            <details class="paper-details"><summary>Abstract <span aria-hidden="true">+</span></summary><p>Evaluations with eight blind and low-vision participants and six Unity developers explore how conversational programming can support personalized accessibility, along with the challenges of reliability, transparency, and trust.</p></details>
+            <div class="paper-links">
+              <a href="https://doi.org/10.1145/3772318.3791616" target="_blank" rel="noopener noreferrer">CHI paper <span aria-hidden="true">↗</span></a>
+              <a href="https://arxiv.org/abs/2510.06573" target="_blank" rel="noopener noreferrer">arXiv <span aria-hidden="true">↗</span></a>
+              <a href="https://dl.acm.org/doi/10.1145/3663547.3759725" target="_blank" rel="noopener noreferrer">ASSETS demo <span aria-hidden="true">↗</span></a>
+              <a href="https://dl.acm.org/doi/10.1145/3706599.3720265" target="_blank" rel="noopener noreferrer">CHI ’25 LBW <span aria-hidden="true">↗</span></a>
+              <a href="https://www.youtube.com/watch?v=uQi0RdGHA0s" target="_blank" rel="noopener noreferrer">Video <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+
   </main>
-  
-  <footer>
-    <div class="container">
-      <p>© <span id="year"></span> Chenglin Li. All rights reserved.</p>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Chenglin Li</p>
+      <div><a href="mailto:lchengl@umich.edu">lchengl@umich.edu</a><button class="motion-toggle" type="button" aria-pressed="false" hidden>Reduce motion</button><a href="#about">Back to top ↑</a></div>
     </div>
   </footer>
-  
-  <script src="script.js"></script>
 </body>
 </html>
