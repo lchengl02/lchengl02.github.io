@@ -60,13 +60,17 @@ h2 { font-size: 23px; font-weight: 600; letter-spacing: -.025em; line-height: 1.
 .news-list time { color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .news-list p { font-size: 13px; color: var(--body); }
 .award-text { color: #86631c; font-weight: 500; }
-summary { cursor: pointer; list-style: none; }
-summary::-webkit-details-marker { display: none; }
-summary > span { display: inline-block; font-size: 14px; font-weight: 400; transition: transform .2s ease; }
-details[open] > summary > span { transform: rotate(45deg); }
-.older-news { margin-left: 104px; margin-top: 5px; }
-.older-news > summary { display: inline-flex; align-items: center; gap: 9px; font-size: 12px; color: var(--link); min-height: 34px; }
-.older-news .news-list { margin-left: -104px; }
+
+/* Keep the native disclosure control below its content in both states. */
+.disclosure { position: relative; padding-bottom: 40px; }
+.disclosure > summary { position: absolute; bottom: 0; left: 0; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; font-size: 12px; color: var(--link); cursor: pointer; list-style: none; }
+.disclosure > summary::-webkit-details-marker { display: none; }
+.disclosure > summary:hover { color: #123c5b; text-decoration: underline; text-underline-offset: 3px; }
+.disclosure-less, .disclosure[open] > summary .disclosure-more { display: none; }
+.disclosure[open] > summary .disclosure-less { display: inline; }
+.disclosure-icon { width: 6px; height: 6px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s ease; }
+.disclosure[open] > summary .disclosure-icon { transform: translateY(2px) rotate(225deg); }
+.older-news > summary { left: 104px; }
 
 /* Publications */
 .research-section { padding-bottom: 14px; }
@@ -83,9 +87,7 @@ h3 a { color: var(--ink); }
 h3 a:hover { color: var(--link); }
 .authors { margin-top: 8px; font-size: 12px; color: var(--muted); line-height: 1.8; }
 .authors strong { text-decoration: underline; text-decoration-color: #b8c4cc; text-underline-offset: 3px; }
-.paper-summary { color: var(--body); font-size: 13px; margin-top: 9px; }
-.paper-details { margin-top: 3px; }
-.paper-details summary { display: inline-flex; align-items: center; gap: 8px; min-height: 34px; font-size: 12px; color: var(--link); }
+.paper-details { margin-top: 2px; }
 .paper-details p { padding: 4px 0 9px; font-size: 13px; color: var(--body); }
 .paper-links { display: flex; align-items: center; flex-wrap: wrap; column-gap: 17px; row-gap: 2px; margin-top: 1px; }
 .paper-links a { display: inline-flex; align-items: center; gap: 4px; min-height: 32px; font-size: 12px; }
@@ -129,14 +131,12 @@ h3 a:hover { color: var(--link); }
   h2 { font-size: 22px; }
   .news-list li { grid-template-columns: 70px minmax(0,1fr); gap: 13px; padding-block: 7px; }
   .news-list time { font-size: 10px; }
-  .older-news { margin-left: 83px; }
-  .older-news .news-list { margin-left: -83px; }
-  .older-news > summary { min-height: 40px; }
+  .older-news > summary { left: 83px; }
   .publication { grid-template-columns: 1fr; gap: 18px; padding-bottom: 24px; }
   .publication-image { width: min(100%, 360px); }
   .publication h3 { font-size: 17px; }
   .publication-meta { margin-bottom: 8px; }
-  .paper-links a, .paper-details summary { min-height: 40px; }
+  .paper-links a { min-height: 40px; }
   .paper-links { column-gap: 18px; }
   .footer-inner { align-items: start; flex-direction: column; gap: 8px; }
   .footer-inner > div { flex-wrap: wrap; gap: 6px 20px; }
