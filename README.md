@@ -17,6 +17,7 @@ Open <http://127.0.0.1:4173>.
 - `script.js` adds section navigation highlighting, subtle reveal effects, and the reduced-motion control. Content and expandable details also work without JavaScript.
 - `assets/pdf/CV_Chenglin.pdf` is the linked CV.
 - `pages/` preserves old URLs with redirects to the homepage. The former project listings are no longer displayed.
+- `secret/index.html` is the self-contained dataset survey, published at <https://chenglinli.com/secret/>. It is publicly accessible and is not linked from the homepage. To update it, replace this file with the latest exported survey HTML.
 
 After editing CSS or JavaScript, update the corresponding `?v=` value in `index.html` so returning visitors receive the new assets.
 
